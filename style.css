@@ -1,0 +1,304 @@
+/* Reset Default Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+/* New Default Setting */
+body {
+  height: 100vh;
+  background-color: hsl(221, 100%, 96%);
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* * */
+/* MAIN STYLING */
+/* * */
+/* 01: Desktop Version */
+
+/* Big Card Container */
+main {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35em;
+  height: 25em;
+  border-radius: 1.5em;
+}
+
+/* Stat Card Container */
+.stat-cont {
+  background-color: hsl(252, 100%, 67%);
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  height: 100%;
+  width: 100%;
+  flex: 2 0 50%;
+  border-radius: 1.5em;
+  justify-items: center;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Stat Content Container */
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.result {
+  color: hsl(241, 100%, 89%);
+  font-weight: 500;
+  font-size: 0.6em;
+}
+
+h1 {
+  margin-bottom: 0.8em;
+}
+
+/* Stat Circle Container */
+.stat-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  width: 9.5em;
+  height: 9.5em;
+  border-radius: 100em;
+  margin-bottom: 1.5em;
+}
+
+.circle-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3.7em;
+  font-weight: 700;
+}
+
+.stat {
+  color: hsl(241, 100%, 89%);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.43em;
+}
+
+p {
+  font-size: 0.9em;
+  color: hsl(241, 100%, 89%);
+}
+
+/* Summary Container */
+.summ-cont {
+  height: 100%;
+  width: 100%;
+  flex: 2 0 50%;
+  border-radius: 1.5em;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Summary Content */
+.summ-content {
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.summ {
+  font-weight: 600;
+  font-size: 0.6em;
+}
+
+.summ-table {
+  display: grid;
+  grid-template-rows: repeat(4, 3em);
+  gap: 0.4em;
+  align-items: center;
+}
+
+.line1,
+.line2,
+.line3,
+.line4 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0.9em;
+  border-radius: 0.6em;
+}
+
+.line1 {
+  background-color: hsl(0, 100%, 67%, 5%);
+}
+
+.line2 {
+  background-color: hsl(39, 100%, 56%, 5%);
+}
+
+.line3 {
+  background-color: hsl(166, 100%, 37%, 5%);
+}
+
+.line4 {
+  background-color: hsl(234, 85%, 45%, 5%);
+}
+
+.property {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  margin-right: 3.5em;
+}
+
+h4 {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.fade-txt {
+  color: hsl(224, 30%, 27%, 50%);
+}
+
+.icon {
+  height: 1em;
+  width: auto;
+}
+
+.color1 {
+  color: hsl(0, 100%, 67%);
+}
+
+.color2 {
+  color: hsl(39, 100%, 56%);
+}
+
+.color3 {
+  color: hsl(166, 100%, 37%);
+}
+
+.color4 {
+  color: hsl(234, 85%, 45%);
+}
+
+button {
+  margin-top: 2em;
+  border: 0;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 50em;
+  background-color: hsl(224, 30%, 27%);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: hsl(0, 0%, 100%);
+}
+
+button:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  cursor: pointer;
+}
+
+.attribution {
+  margin-top: 6em;
+}
+
+/* ------------------ */
+/* 02: Mobile Version */
+@media (max-width: 480px) {
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .stat-cont {
+    flex: 1 0 45%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+
+  .summ-cont {
+    flex: 2 0 55%;
+    border-radius: 0;
+  }
+
+  p {
+    font-size: 1.05em;
+  }
+
+  .stat-circle {
+    width: 9.2em;
+    height: 9.2em;
+  }
+
+  h1 {
+    margin-bottom: 0.7em;
+  }
+
+  .summ-table {
+    gap: 1em;
+  }
+
+  .line1,
+  .line2,
+  .line3,
+  .line4 {
+    border-radius: 0.7em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .icon {
+    height: 1.35em;
+    width: auto;
+  }
+
+  .summ-table {
+    gap: 1.5em;
+  }
+
+  button {
+    margin-top: 1.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.1em;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
